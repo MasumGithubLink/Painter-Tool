@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaked Art Application</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/css/alertify.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+<body >
+
+    <div class="container-fluid my-3">
+        <div class="row">
+            <div>
+                <div class="col-md-2">
+                    <p class="bg-primary bg-gradiant text-white text-center">Translate the Application</p>
+                </div>
+                <div id="google_translate_element"></div>
+                <h1 class="text-center">Shaked Art Application</h1>
+                <hr/>
+            </div>
+            <!-- Uploading Images -->
+             <div class="col-md-4">
+                <div class="form_wrapper">
+                    <form>
+                        <div class="form-group">
+                            <label for="wallImageInput" class="label">Upload Your Wall Image</label>
+                            <input class="form-control" type="file" id="wallImageInput" accept="image/jpg, image/png, image/jpeg">
+                        </div>
+                        <div class="form-group">
+                            <label for="paintingImageInput" class="label">Upload Your Favorite Painting</label>
+                            <input class="form-control" type="file" id="paintingImageInput" accept="image/jpg, image/png, image/jpeg">
+                        </div> 
+                    </form>
+                </div>
+             </div>
+             <!-- Observing the Output -->
+             <div class="col-md-8">
+                <div>
+                    <h1 class="outputHeadingLG">You can MOVE and RESIZE the Painting using Mouse/Controls Button as your wish. Even you can DOWNLOAD the output by clicking the DOWNLOAD BUTTON below:</h1>
+                    <h1 class="outputHeadingSM">You can MOVE and RESIZE the Painting as your wish by controls below. Even you can DOWNLOAD the output by clicking on following DOWNLOAD BUTTON:</h1>
+                 </div>
+                <div id="displayWallImage">
+                    <div class="resize-drag" id="displayPaintingImage"></div>
+                 </div>
+                 <div >
+                    <button id="downloadImageButton" class="btn btn-success rbtn  my-2">Download</button>
+                    <p id="downloadNoteWrapper"> <strong>Note:</strong> Please don't remove the " <span id="downloadNote"> .jpg </span> " extension from the output file name during download</p>
+                 </div>
+                 <!-- <div id="previewImg"> -->
+
+                 <div id ="ControlButtons">
+                    <div class="form-group">
+                        <label for="zoomInOut">Zoom In & Zoom Out</label>
+                        <input class="form-control" type="range" id="zoomInOut" min="50" max="260" value="0" >
+                    </div>
+                    <div class="form-group">
+                        <label for="moveLeftRight">Move Horizontal </label>
+                        <input class="form-control" type="range" id="moveLeftRight" min="0" max="265" value="0" >
+                    </div>
+                    <div class="form-group">
+                        <label for="moveTopBottom">Move Vertical</label>
+                        <input class="form-control" type="range" id="moveTopBottom" min="0" max="220">
+                    </div>    
+                 </div>
+
+                 <!-- Control Buttons for PC -->
+                 <div id ="ControlButtonsforPC">
+                    <div class="form-group">
+                        <label for="zoom">Zoom In & Zoom Out</label>
+                        <input class="form-control zoomInOut" type="range" id="zoom" min="50" max="260" value="0" >
+                    </div>
+                    <div class="form-group">
+                        <label for="mlf">Move Horizontal </label>
+                        <input class="form-control moveLeftRight" type="range" id="mlf" min="0" max="400" value="0" >
+                    </div>
+                    <div class="form-group">
+                        <label for="mtb">Move Vertical</label>
+                        <input class="form-control moveTopBottom" type="range" id="mtb" min="0" max="300">
+                    </div>    
+                 </div>
+             </div>
+        </div>
+ </div>
+  
+
+ <script src="assets/js/bootstrap.min.js"></script>
+ <script src="assets/js/jquery.min.js"></script>
+ <script src="assets/js/jqueryui.min.js"></script>
+ <script src="assets/js/interact.min.js"></script>
+ <script src="assets/js/html2canvas.min.js"></script>
+ <script src="assets/js/canvas2image.min.js"></script>
+ <script src="assets/js/alertify.min.js"></script>
+ <script src="assets/js/index.js"></script>
+ <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+ 
+</body>
+</html>
+
+

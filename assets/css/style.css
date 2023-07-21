@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* css variables */
+:root {
+  --color: #581845;
+}
+
+/*for wall image */
+
+#displayWallImage{
+  width: 100%;
+  height: 400px;
+  border: 1px solid var(--color);
+  border-radius: 3px;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  overflow:hidden;
+}
+
+
+
+/* for painting image */
+#displayPaintingImage{
+  position: absolute;
+  background-position: center center;
+  background-size:contain;
+  background-repeat:no-repeat;
+  top: 5px;
+  left: 42%;
+  width: 100px;
+  height:100%;
+  cursor: move;
+
+}
+
+
+
+/* for label */
+
+.label{
+  background-color: var(--color);
+  padding: 5px 10px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+/* for form heading Large Devices */
+.outputHeadingLG{
+  color: var(--color);
+  font-size: 20px;
+}
+
+/* for form heading Small Devices*/
+.outputHeadingSM{
+  color: var(--color);
+  font-size: 16px;
+  margin-top:10px;
+}
+
+
+
+/* Download Note */
+#downloadNoteWrapper{
+    display:none;
+}
+#downloadNote{
+    color: red;
+}
+
+.outputHeadingSM{
+  display: none;
+}
+
+
+
+
+/* Interact JS */
+.resize-drag {
+  touch-action: none;
+  box-sizing: border-box;
+}
+
+
+/* Control Buttons for Moblile */
+ #ControlButtons{
+  display: none;
+} 
+ #ControlButtonsforPC{
+      display:block;
+  }
+@media only screen and (max-width: 800px) {
+  #ControlButtons {
+    display: block;
+  }
+  
+  #ControlButtonsforPC{
+      display:none;
+  }
+  .outputHeadingSM{
+    display: block;
+  }
+  .outputHeadingLG{
+    display: none;
+  }
+  #downloadNoteWrapper{
+      display:block;
+  }
+}
+
+
+/* Alertify Text Display None */
+.alertify .ajs-header {
+  display: none;
+}
